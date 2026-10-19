@@ -1,0 +1,22 @@
+#ytdlp-dl-host {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+#ytdlp-dl-host.floating {
+  position: fixed;
+  top: 72px;
+  right: 16px;
+  z-index: 2147483646;
+  margin-left: 0;
+}
+
+#ytdlp-dl-panel {
+  position: fixed;
+  z-index: 2147483647;
+  top: 0;
+  left: 0;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>YouTube Downloader</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <header>
+      <img src="icons/icon32.png" width="32" height="32" alt="">
+      <div>
+        <h1>YouTube Downloader</h1>
+        <p id="status">Проверяю хост…</p>
+      </div>
+    </header>
+    <label>
+      Папка сохранения
+      <input id="dir" type="text" spellcheck="false" autocomplete="off" placeholder="~/Downloads/YouTube">
+    </label>
+    <button id="save" type="button">Сохранить папку</button>
+    <p id="tools"></p>
+    <p id="hint">Кнопка «Скачать» появляется на странице ролика и Shorts.</p>
+    <script src="popup.js"></script>
+  </body>
+</html>

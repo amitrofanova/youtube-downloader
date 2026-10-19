@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Downloader",
+  "version": "1.0.0",
+  "description": "Скачивает ролик с YouTube через yt-dlp в папку на компьютере.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1gQe7mEP6qbrakro7N4+unYVGIY9cI7BZAjYwhj/HW74MP99QU/oIhgv8g9OeBwyNhBg1QYPhE1OWHyt4RMbwHOSyiKcuRD+IGnFGUfmK1OHslMbWDyKPYn4XxT/YkWctoWTpxRkyIznPWaVy1RjFtowqBI9PI0RtnIpBf7cIj4U55MoPhh1l7I9zlIGUReBfsrIDwv3R759+qYAFCYGCQgjlkyIQ97x9x6EorIbLHiOThy1AtXSIVHvVf2yYbdM16BUKIWAA1S9m3lFdb2jGfKwQsCH/cAms8laojRx9Lenf6up3kVkrUbXGy360IIrHqn9u3sjY1NqCP0i3K/hBQIDAQAB",
+  "permissions": ["nativeMessaging", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "YouTube Downloader",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
